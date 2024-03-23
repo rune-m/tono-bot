@@ -37,7 +37,6 @@ def getAllSundaysFromDate(fromDateInclusive: datetime):
     raise Exception("Kunne ikke hente planer fra PCO")
   sundays = []
   today = datetime.today()
-  # today = datetime.today() - timedelta(days=2) # Foreløpig
   for plan in iter(plans["data"]):
     planDate = parseStrToDate(plan["attributes"]["sort_date"])
     if planDate.timestamp() >= fromDateInclusive.timestamp() and planDate.timestamp() <= today.timestamp():

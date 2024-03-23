@@ -13,7 +13,6 @@ def run_bot(driverLoader, fromDate=None):
   Logger.setUpLogger()
   driver = driverLoader()
 
-  status = None
   loggInnToTono(driver)
 
   allSongsWithUnknownArtist = []
@@ -32,7 +31,7 @@ def run_bot(driverLoader, fromDate=None):
     allSongsWithoutCCLI = list(set(allSongsWithoutCCLI))
 
     status = Status.SUCCESS
-    Logger.log("Suksess!" if status == Status.SUCCESS else "Feilet")
+    Logger.log(status.value)
 
   except Exception as e:
     status = Status.ERROR

@@ -38,5 +38,5 @@ def dateIsWithinLast7Days(dateStr: str):
   return date > weekAgo and date < today
 
 class Status(Enum):
-    SUCCESS = 1
-    ERROR = 2
+    SUCCESS = "Suksess!"
+    ERROR = "Feilet"

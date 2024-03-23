@@ -5,20 +5,20 @@ from tools.logger import Logger
 from constants import MAIL_ADDRESS, MAIL_PASSWORD
 from tools.utils import Status
 
-def send_email(to_mail, result, text, unknowArtistSongs=[], songsWithoutCCLI=[]):
+def send_email(to_mail, status, text, unknowArtistSongs=[], songsWithoutCCLI=[]):
   from_mail = MAIL_ADDRESS
   password = MAIL_PASSWORD
 
-  resultText = 'Suksess!' if result == Status.SUCCESS else 'Feilet'
+  resultText = status.value
 
   if from_mail == '' or password == '':
     Logger.log('Kan ikke sende mail. MAIL_ADDRESS eller MAIL_PASSWORD er ikke satt.')
     return
 
-  statusEmoji = "✅" if result == Status.SUCCESS else "❌"
+  statusEmoji = "✅" if status == Status.SUCCESS else "❌"
 
   unknowArtistSongsText = ''
-  if len(unknowArtistSongs) != 0 and result == Status.SUCCESS:
+  if len(unknowArtistSongs) != 0 and status == Status.SUCCESS:
     unknowArtistSongsText = '<br /><br />Sanger fra PCO som mangler låtskriver:'
     for song in unknowArtistSongs:
       unknowArtistSongsText += '<br /> - ' + song
