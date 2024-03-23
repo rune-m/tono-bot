@@ -69,6 +69,6 @@ Her kan du bruke Python-pakken **pyvirtualdisplay**.
 
 Mer info kommer etterhvert
 
-## Lisens
+## License
 
-Se [LICENSE](https://github.com/rune-m/tono-bot/blob/main/LICENSE) for lisensrettigheter og begrensninger (MIT).
+See the [LICENSE](https://github.com/rune-m/tono-bot/blob/main/LICENSE) file for license rights and limitations (MIT).
