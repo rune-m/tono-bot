@@ -24,4 +24,5 @@ CHURCH_INFO = {
   'poststed': constant_not_initialized_error('poststed'),
   'tlf': constant_not_initialized_error('tlf'),
   'hjemmeside': constant_not_initialized_error('hjemmeside'),
+  'klokkeslett_gudstjeneste': constant_not_initialized_error('klokkeslett_gudstjeneste')
 }

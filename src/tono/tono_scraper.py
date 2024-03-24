@@ -45,7 +45,7 @@ def fyllInnDatoOgKlokkeslett(driver: webdriver.Chrome, date: datetime):
     datoInput.send_keys(Keys.RETURN)
 
     klokkeInput = driver.find_element(By.XPATH, '//*[@id="time"]')
-    klokkeInput.send_keys('12:00')
+    klokkeInput.send_keys(info['klokkeslett_gudstjeneste'])
     klokkeInput.send_keys(Keys.RETURN)
   except:
     raise Exception("Kunne ikke fylle inn dato og klokkeslett")
