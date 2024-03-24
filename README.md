@@ -30,7 +30,7 @@ Føl deg fri til å bidra med videreutvikling av TonoBot gjennom Pull Requests.
 $ cd tono-bot
 ```
 
-1. Dupliser og rename **constants_template.py** til **constants.py**. (Må ligge i **src/**-mappen).
+1. Dupliser og rename **constants_template.py** til **constants.py**. (Må ligge i **src/**-mappen). Fyll ut verdiene for variablene i **constants.py**.
 
 2. [Installer Python](https://www.python.org/downloads/). Jeg har brukt Python 3.10. Python 3.8-3.11 vil mest sannsynlig fungere.
 3. Installer virtualenv-pakken (med pip eller pip3):
