@@ -8,6 +8,13 @@ from constants import MAIL_TO_RECIEVE_STATUS_MAIL
 from tools.utils import Status
 
 def run_bot(driverLoader, fromDate=None):
+  '''
+  Kjør TonoBot. Henter planer fra Planning Center. Henter fra forrige møte hvis fromDate=None.
+
+  Parameters
+  - driverLoader - Loader for browser driveren som skal brukes
+  - fromDate - Henter planer fra og med denne datoen (default=None)
+  '''
   sendFromDate = fromDate != None
 
   Logger.setUpLogger()

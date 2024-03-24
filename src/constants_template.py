@@ -4,6 +4,7 @@ def constant_not_initialized_error(variable_name):
 # Planning Center
 PCO_APP_ID = constant_not_initialized_error('PCO_APP_ID') # Application ID (ligger under din access token hos Planning Center)
 PCO_SECRET = constant_not_initialized_error('PCO_SECRET') # Secret (ligger under din access token hos Planning Center)
+PCO_PLAN_SERVICE_TYPE_ID = constant_not_initialized_error('PCO_PLAN_SERVICE_TYPE_ID') # Service ID for planene du ønsker å hente fra Planning Center
 
 # Tono
 TONO_MAIL = constant_not_initialized_error('TONO_MAIL') # E-post for din Tono-bruker

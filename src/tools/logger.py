@@ -21,7 +21,7 @@ class Logger:
                         datefmt='%d %b %y %H:%M:%S',
                         handlers=[
                           logging.StreamHandler(),
-                          logging.FileHandler(f'{__file__}/../../logs/{datetime.now().strftime("%Y%m%d_%H-%M_log")}'),
+                          logging.FileHandler(f'src/logs/{datetime.now().strftime("%Y%m%d_%H-%M_log")}'),
                           logging.StreamHandler(Logger.__log_stream)
                         ])
 

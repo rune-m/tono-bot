@@ -3,7 +3,7 @@ from tools.song import Song, SongsWithDate
 from tools.api_client import getFromApi, getFromUrl
 from tools.utils import beautifyDateTime, dateHasPassed, dateIsWithinLast7Days, parseStrToDate, removeIkkeBestemtSang, secondsToMinSec
 from tools.logger import Logger
-from constants import PCO_APP_ID, PCO_SECRET
+from constants import PCO_APP_ID, PCO_SECRET, PCO_PLAN_SERVICE_TYPE_ID
 import base64
 
 HOSTNAME = "https://api.planningcenteronline.com/services/v2"
@@ -15,7 +15,7 @@ def getLastSundayPlans(numberOfSundays=1, onlyCheckLast7Days=False):
   # Get last 100 plans and find the last completed plan
   Logger.log("Henter planer...")
   try:
-    plans = getFromApi(f'{HOSTNAME}/service_types/631909/plans?order=-sort_date&per_page=100', auth_token=f'Basic {b64auth.decode("UTF-8")}')
+    plans = getFromApi(f'{HOSTNAME}/service_types/{PCO_PLAN_SERVICE_TYPE_ID}/plans?order=-sort_date&per_page=100', auth_token=f'Basic {b64auth.decode("UTF-8")}')
   except:
     raise Exception("Kunne ikke hente planer fra PCO")
   sundays = []
@@ -32,7 +32,7 @@ def getLastSundayPlans(numberOfSundays=1, onlyCheckLast7Days=False):
 def getAllSundaysFromDate(fromDateInclusive: datetime):
   Logger.log("Hener planer...")
   try:
-    plans = getFromApi(f'{HOSTNAME}/service_types/631909/plans?order=-sort_date&per_page=100', auth_token=f'Basic {b64auth.decode("UTF-8")}')
+    plans = getFromApi(f'{HOSTNAME}/service_types/{PCO_PLAN_SERVICE_TYPE_ID}/plans?order=-sort_date&per_page=100', auth_token=f'Basic {b64auth.decode("UTF-8")}')
   except:
     raise Exception("Kunne ikke hente planer fra PCO")
   sundays = []
