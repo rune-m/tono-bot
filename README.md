@@ -1,6 +1,6 @@
 # TonoBot
 
-> TonoBot henter sanger fra din gudstjenesteplan og rapporterer til Tono.
+> TonoBot henter automatisk sanger fra din gudstjenesteplan og rapporterer til Tono.
 
 ## Features
 
