@@ -1,4 +1,5 @@
 import sys
+print('/'.join(__file__.split('/')[:-2]))
 sys.path.append('/'.join(__file__.split('/')[:-2]))
 from bot import run_bot
 from pyvirtualdisplay import Display
