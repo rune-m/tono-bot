@@ -1,10 +1,12 @@
 #!/usr/bin/python3
+import sys
+sys.path.append('/'.join(__file__.split('/')[:-2]))
 import schedule
 import time
 from datetime import datetime
 from main_pi import run
     
-schedule.every().monday.at("03:00").do(run)
+schedule.every().sunday.at("20:14").do(run)
 
 print(str(datetime.now()) + " - Starter TonoBot...")
 
