@@ -65,9 +65,7 @@ $ env/bin/python src/main.py
 
 ### (Optional) Kjør på en Raspberry Pi
 
-Her kan du bruke Python-pakken **pyvirtualdisplay**.
-
-Mer info kommer etterhvert
+Her kan man bruke Python-pakkene **pyvirtualdisplay** og **schedule** og kjøre **pi_worker.py** for å la TonoBot kjøre ukentlig.
 
 ## License
 
