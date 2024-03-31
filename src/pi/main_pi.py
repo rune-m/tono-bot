@@ -1,4 +1,4 @@
-from tono.tonobot import run_bot
+from bot import run_bot
 from pyvirtualdisplay import Display
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
