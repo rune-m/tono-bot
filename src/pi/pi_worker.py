@@ -6,7 +6,7 @@ import time
 from datetime import datetime
 from main_pi import run
     
-schedule.every().sunday.at("20:14").do(run)
+schedule.every().sunday.at("20:18").do(run)
 
 print(str(datetime.now()) + " - Starter TonoBot...")
 
