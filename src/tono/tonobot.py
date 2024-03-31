@@ -17,7 +17,7 @@ def sendSongsToTono(driver: webdriver.Chrome, songsWithDate: SongsWithDate):
       songsWithUnkownArtist.append(song.title)
     fyllInnSang(driver, i + 1, song)
   fyllInnInfo(driver)
-  lagreFremforing(driver)
-  # sendFremforing(driver)
+  # lagreFremforing(driver)
+  sendFremforing(driver)
 
   return songsWithUnkownArtist
