@@ -1,7 +1,10 @@
+import sys
+sys.path.append('/'.join(__file__.split('/')[:-2]))
 from bot import run_bot
 from pyvirtualdisplay import Display
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
+
 
 display = Display(visible=0, size=(1600, 1600))
 display.start()
