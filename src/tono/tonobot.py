@@ -18,6 +18,6 @@ def sendSongsToTono(driver: webdriver.Chrome, songsWithDate: SongsWithDate):
     fyllInnSang(driver, i + 1, song)
   fyllInnInfo(driver)
   # lagreFremforing(driver)
-  sendFremforing(driver)
+  # sendFremforing(driver)
 
   return songsWithUnkownArtist
