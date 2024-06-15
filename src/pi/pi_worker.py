@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-import sys
-sys.path.append('/'.join(__file__.split('/')[:-2]))
 import schedule
 import time
 from datetime import datetime
