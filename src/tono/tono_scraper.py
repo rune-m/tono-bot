@@ -12,17 +12,21 @@ def loggInnToTono(driver: webdriver.Chrome):
     Logger.log("Logger inn hos Tono...")
     driver.get('https://m.tono.no/Login/')
 
-    userElem = driver.find_element(By.XPATH, '//*[@id="inputUsername"]')
+    userElem = driver.find_element(By.XPATH, '//*[@id="email"]')
     userElem.send_keys(TONO_MAIL)
 
-    Neste = driver.find_element(By.NAME, 'login')
+    Neste = driver.find_element(By.XPATH, '//*[@id="btnNext"]')
     Neste.click()
 
-    passwordElem = driver.find_element(By.XPATH, '//*[@id="inputPassword"]')
+    sleep(3)
+
+    passwordElem = driver.find_element(By.XPATH, '//*[@id="password"]')
     passwordElem.send_keys(TONO_PASSWORD) 
 
-    loggInn = driver.find_element(By.XPATH, '//*[@id="loginform"]/div[3]/button')
+    loggInn = driver.find_element(By.XPATH, '//*[@id="next"]')
     loggInn.click()
+
+    sleep(3)
 
   except:
     raise Exception("Kunne ikke logge inn hos Tono")
